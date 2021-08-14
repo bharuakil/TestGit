@@ -1,0 +1,32 @@
+<aura:component access="global" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" controller="ListViewController">
+    <aura:handler name="init" value="this" action="{!c.doInit}" />
+    <aura:attribute name="objectInfo" type="string" default="Contact"/>
+    <aura:attribute name="listViewResult" type="string[]"/>
+	<aura:attribute name="currentListViewName" type="string" />
+    <aura:attribute name="showListView" type="boolean" default="false"/> 
+    <lightning:card>
+    <lightning:layout>
+        <lightning:layoutItem size="3" padding="around-small">
+            <div class="slds-form-element">
+                <lightning:select name="select1" onchange="{!c.onPicklistChange}" label="{!v.objectInfo}" >
+                    <aura:iteration items="{!v.listViewResult}" var="listView">
+                        <option value="{!listView.developerName}">{!listView.label}</option>
+                    </aura:iteration> 
+                </lightning:select> 
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+   
+   <!-- lightning List View : https://sforce.co/2Q4sebt--> 
+    <aura:if isTrue="{!v.showListView}">
+        <lightning:listView objectApiName="{!v.objectInfo}"
+                            listName="{!v.currentListViewName}"
+                            rows="5"
+                            showSearchBar="true"
+                            showActionBar="false"
+                            enableInlineEdit="true"
+                            showRowLevelActions="false"
+                            />
+    </aura:if> 
+    </lightning:card>
+</aura:component>

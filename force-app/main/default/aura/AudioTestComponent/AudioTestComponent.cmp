@@ -1,0 +1,4 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <audio src="{!$Resource.sound1}" type="audio/mp3" autoplay="true" />
+    test
+</aura:component>
