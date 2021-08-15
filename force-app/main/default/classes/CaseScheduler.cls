@@ -5,6 +5,7 @@ public class CaseScheduler implements Schedulable{
         this.objName = objectName;
     }
     public void execute(SchedulableContext context){
+        //New Branch1 Changes
         BatchToProcessCase cs = new BatchToProcessCase(objName);
         Database.executeBatch(cs, 200);
     }
