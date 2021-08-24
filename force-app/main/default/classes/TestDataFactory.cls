@@ -9,6 +9,7 @@
 public class TestDataFactory {
     public static List<Case> createCases(Integer numCase, Boolean isCreate){
         //Branch1 change
+        //NewScrachBranch change2
         //NewScrachBranch change
         List<Case> caseList = new List<Case>();
         for(Integer i=0;i<numCase;i++){
@@ -20,5 +21,6 @@ public class TestDataFactory {
         }
         return caseList;
         //Branch1 change
+        //New Scrach Branch change
     }
 }
