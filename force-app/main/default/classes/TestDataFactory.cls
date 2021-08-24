@@ -9,6 +9,7 @@
 public class TestDataFactory {
     public static List<Case> createCases(Integer numCase, Boolean isCreate){
         //Branch1 change
+        //NewScrachBranch change
         List<Case> caseList = new List<Case>();
         for(Integer i=0;i<numCase;i++){
             Case cs = new Case(Priority = 'High', Subject='New Case'+i, Status = 'Working');
