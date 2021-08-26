@@ -18,6 +18,7 @@ public class ListViewController {
             listViewWrapperList.add(listViewWrap);
         }
         return listViewWrapperList;
+        //NewscratchBranch1 Changes
     }
     public class listViewWrapper{
         @AuraEnabled public string label;
